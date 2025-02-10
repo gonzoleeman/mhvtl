@@ -137,7 +137,6 @@ pat='int (*match)(struct device *dev, const struct device_driver *drv);'
 # First, find the file
 bus_type_def_file=$(grep -rl 'struct bus_type {' ${hdrs})
 : {bus_type_def_file:="not-found"}
-echo "DEBUG: bus_type_def_file=$bus_type_def_file"
 
 # Now check for the 2nd argument needs a "const"
 if [ -r "$bus_type_def_file" ] &&
